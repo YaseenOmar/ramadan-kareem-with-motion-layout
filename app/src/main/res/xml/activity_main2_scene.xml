@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnSwipe motion:touchAnchorId="@+id/ramadan_img" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="136dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="189dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/ramadanMubarak" />
+        <Constraint
+            android:layout_height="135dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="229dp"
+            android:id="@+id/ramadan_img"
+            motion:layout_constraintStart_toEndOf="@+id/ramadanMubarak"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteX="243dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_editor_absoluteX="4dp"
+            android:layout_width="match_parent"
+            motion:layout_constraintTop_toBottomOf="@id/arabicText"
+            android:id="@+id/timesimg" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_editor_absoluteX="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            motion:layout_constraintTop_toBottomOf="@id/ramadan_img"
+            android:id="@+id/arabicText" />
+    </ConstraintSet>
+</MotionScene>
